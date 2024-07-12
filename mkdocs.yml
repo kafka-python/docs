@@ -1,0 +1,109 @@
+site_name: kafka-python.org
+site_description: 'kafka-python resources'
+site_author: 'kafka-python'
+site_url: 'https://kafka-python.com'
+
+copyright: >
+  Copyrighted to the contributors to this site.
+
+docs_dir: docs/
+repo_name: kafka-python/docs
+repo_url: https://github.com/kafka-python/docs
+edit_uri: tree/main/docs
+
+nav:
+  - 'Home': 'home/index.md'
+  - 'Get started': 
+    - 'Start': 'get-started/index.md'
+  - 'Resources': 
+    - 'Data sources': 'data-sources/index.md'
+  - 'Articles': 'articles/index.md'
+  - 'Videos': 'videos/index.md'
+  - 'Brokers': 'brokers/index.md'
+
+plugins:
+  - include-markdown
+  - search:
+      separator: '[\s\-\.]' 
+  # - social:
+  #     cards_layout_dir: layouts
+  #     cards_layout: xxx
+  - glightbox
+
+theme:
+  name: 'material'
+  logo: 'assets/logo.svg'
+    
+  favicon: 'assets/favicon.ico'
+  
+  palette: 
+    
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue grey
+      accent: blue
+      toggle:
+        icon: material/weather-night 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: light blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+  features:
+  - content.code.copy
+  - navigation.instant     # Instant loading pages.
+  - navigation.sections    # Render top sections as groups.
+  - navigation.top         # Adds a "Back to top" that is shown when scrolling up.
+  - navigation.tracking    # Updates the url with highlighted section anchor.
+  - navigation.indexes     # Documents can be directly attached to sections
+  - search.highlight       # Search will highlight the searched word(s) on the page.*
+  - search.share           # Adds an option to share a search query link.*
+  - search.suggest         # Search will suggest the likeliest completion for a word.*
+  - content.tabs.link
+  - content.code.annotate  # code annotations
+  - content.action.view    # view page source
+  
+  icon:
+    logo: 'material/library'
+    repo: 'material/library'
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - footnotes
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.details:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
