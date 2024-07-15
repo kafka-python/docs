@@ -13,14 +13,18 @@ edit_uri: tree/main/docs
 
 nav:
   - 'Home': 'home/index.md'
-  - 'Get started': 
-    - 'Start': 'get-started/index.md'
-  - 'Resources': 
+  - 'Learn': 
+    - 'get-started/index.md'
+    - 'Official Docs': 'get-started/read-the-docs.md'
+    - 'Free courses': 'learn/courses.md'
+  - 'Ecosystem': 
     - 'Data sources': 'data-sources/index.md'
-  - 'Articles': 'articles/index.md'
-  - 'Videos': 'videos/index.md'
-  - 'Brokers': 'brokers/index.md'
-
+    - 'Libraries': libraries/index.md
+    - 'Vendors': 'vendors/index.md'
+  - 'Community': 'articles/index.md'
+  - 'License': 'articles/index.md'
+  - 'GitHub': 'articles/index.md'
+  
 plugins:
   - include-markdown
   - search:
@@ -83,6 +87,11 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
+# extra:
+#   social:
+#     - icon: fontawesome/brands/mastodon 
+#       link: https://fosstodon.org/@squidfunk
+      
 markdown_extensions:
   - attr_list
   - md_in_html
